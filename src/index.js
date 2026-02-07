@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
-import HalloWorld from './.halloWorld/HalloWorld';
+import HalloWorld from './.vscode/halloWorld/HalloWorld';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HalloWorld />
+    <HalloWorld lastName='Mennis' /> 
   </React.StrictMode>
 );
 
