@@ -1,8 +1,8 @@
 // method 1 to creat a component with function 
-export default function halloWorld(props) {
-    console.log(props);
+export default function halloWorld({lastName}) {
+    //console.log(props);
     return (
-        <h1>Hello  {props.lastName}</h1>
+        <h1>Hello {lastName}</h1>
     );
 }
 
