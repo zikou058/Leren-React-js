@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
-import HalloWorld from './.vscode/halloWorld/HalloWorld';
+import HalloWorld from './halloWorld/HalloWorld';
 import reportWebVitals from './reportWebVitals';
+import TextField from './Forms/TextField';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HalloWorld lastName='Mennis' /> 
+    <HalloWorld lastName='Zakaria' /> 
+    <TextField inputName='firstName' inputLabel='firstname'> 
+     Veuillez enter un first name
+    </TextField>
+    <TextField inputName='lastName' inputLabel='last name'>
+      Veuillez enter un last name
+    </TextField>
   </React.StrictMode>
 );
 
