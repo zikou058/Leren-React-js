@@ -5,18 +5,20 @@ import './index.css';
 import HalloWorld from './halloWorld/HalloWorld';
 import reportWebVitals from './reportWebVitals';
 import TextField from './Forms/TextField';
+import Fruit from './Fruits/Fruit';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
 root.render(
   <React.StrictMode>
-    <HalloWorld lastName='Zakaria' /> 
+    {/* <HalloWorld lastName='Zakaria' /> 
     <TextField inputName='firstName' inputLabel='firstname'> 
      Veuillez enter un first name
     </TextField>
     <TextField inputName='lastName' inputLabel='last name'>
       Veuillez enter un last name
-    </TextField>
+    </TextField> */}
+    <Fruit fruits={fruitsArray}/> 
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
