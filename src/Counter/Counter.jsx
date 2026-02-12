@@ -5,21 +5,25 @@ export default class Counter extends Component {
         super(props); 
         this.state = {
             counter: 0,
-            date:undefined,
         }
     }
-
-    componentDidMount() {
-        setInterval(() => {
+    handleReset = () => { 
         this.setState((prevState) => {
-        return { counter: prevState.counter + 1}; 
-    });
-        },1000)
-}
+        return { counter: 0} 
+        });
+    }
 
-    render(){
+    handleClick = () => {
+        this.setState((prevState) => { 
+           return { counter: prevState.counter + 1}
+        });
+    }
+
+    render() {
         return(
             <div>
+            <button onClick={this.handleClick}> Click to Increment !! </button>
+            <button onClick={this.handleReset}> Reset </button>
                 Il y a {this.state.counter} secondes
             </div>
         )
