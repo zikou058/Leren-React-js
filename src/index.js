@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 //import Counter from './Counter/Counter';
-import Event from './Events/Event';
 import Counter from './Counter/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +18,7 @@ root.render(
     </TextField>
     <Fruit fruits={fruitsArray}/>  */}
     {/*<Counter /> */}
-    <Counter/>
+    <Counter defaultValue={2} incrementBy={3} />
 
   </React.StrictMode>
 );
