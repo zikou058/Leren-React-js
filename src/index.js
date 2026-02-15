@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 //import Counter from './Counter/Counter';
-import Form from './Forms/Form';
+import FruitList from './Fruits/FruitList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
+//const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
 root.render(
   <React.StrictMode>
     {/* <HalloWorld lastName='Zakaria' /> 
@@ -19,7 +19,8 @@ root.render(
     <Fruit fruits={fruitsArray}/>  */}
     {/*<Counter /> */}
     {/* <Counter defaultValue={2} incrementBy={3} /> */}
-    <Form />
+    {/* <Form /> */}
+    <FruitList  />
 
   </React.StrictMode>
 );
