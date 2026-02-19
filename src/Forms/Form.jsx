@@ -13,7 +13,7 @@ import { useState } from "react";
     };
     const handelgeInputChane = () => {
         const age =document.querySelector('#age').value
-        setAge(age) 
+        setAge(age)
     }
 
     const handleSubmit = (e) => {

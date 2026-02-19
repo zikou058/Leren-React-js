@@ -9,6 +9,25 @@
 import {Component} from "react";
 
 export default class HalloWorld extends Component {
+    timer = null; 
+    clickBody = () => {
+        alert('clicked')
+     }
+    componentDidMount() {
+        console.log('component mounted')
+        document.addEventListener('click', this.clickBody)
+        this.timer = setInterval(() => {
+            console.log('Time interval')
+        }, 1000)
+    }
+    conponentDidUpdate(prevProps, prevState) {
+        console.log('component updated')
+    }
+    componentWillUnmount() {
+        console.log('component unmounted')
+        document.removeEventListener('click', this.clickBody)
+        clearInterval(this.timer)
+    }
     render() {
         const age = 2;
         return (age >20 ? <h1>Hallo{this.props.lastName} Adult:</h1> :<h1>Hallo{this.props.lastName} Child:</h1> )
