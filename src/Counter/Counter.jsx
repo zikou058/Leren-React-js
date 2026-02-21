@@ -28,19 +28,30 @@ export default class Counter extends Component {
         super(props); 
         this.state = {
             counter: 0,
+            age : 15
         }
         console.log('Hi Constructor')
     }
+     getSnapshotBeforeUpdate(prevProps, prevState) {
+        const scroll = {x:window.scrollX, y:window.scrollY}
+        return scroll;
+    }
+
     componentDidMount() {
         // fetch API:
         console.log('component mounted')
     }
-    componentDidUpdate(prevProps, prevState) {
-        if(prevState.counter !== this.state.counter) {
-            console.log('component updated') 
-            alert(`prev value ${prevState.counter} new value ${this.state.counter}`) 
-            console.log(prevState,this.state )
+    componentDidUpdate(prevProps, prevState, snapshot){
+        window.scroll(snapshot.x+50, snapshot.y+50)
+        console.log(snapshot)
+    }
+
+    schouldComponentUpdate(nextProps, nextState ,nextContext) {
+        console.log(nextState.this.state)
+        if (nextState !== this.state) {
+            return false;
         }
+        return false ;
     }
 
     handleReset = () => { 

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 //import Counter from './Counter/Counter';
-import { ToggleName } from './toggle/toggleName';
+//import { ToggleName } from './toggle/toggleName';
+import Counter from './Counter/Counter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
 root.render(
@@ -19,7 +20,7 @@ root.render(
     {/*<Counter /> */}
     {/* <Counter defaultValue={2} incrementBy={3} /> */}
     {/* <Form /> */}
-    <ToggleName  />
+    <Counter  />
 
   </React.StrictMode>
 );
