@@ -20,7 +20,7 @@ root.render(
     {/*<Counter /> */}
     {/* <Counter defaultValue={2} incrementBy={3} /> */}
     {/* <Form /> */}
-    <Counter  />
+    <Counter defaultValue={0} />
 
   </React.StrictMode>
 );
