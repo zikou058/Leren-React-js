@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-//import App from './App';
+import Product from './TP/Product';
+import Appp from './test_bootstrap/Appp';
 //import Counter from './Counter/Counter';
 //import { ToggleName } from './toggle/toggleName';
-import Counter from './Counter/Counter';
+// import Counter from './Counter/Counter';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
 root.render(
@@ -20,7 +23,9 @@ root.render(
     {/*<Counter /> */}
     {/* <Counter defaultValue={2} incrementBy={3} /> */}
     {/* <Form /> */}
-    <Counter defaultValue={0} />
+    {/* <Counter defaultValue={0} /> */}
+    <Product />
+    <Appp />
 
   </React.StrictMode>
 );
