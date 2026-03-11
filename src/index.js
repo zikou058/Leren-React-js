@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import Event from './TP/Event/Event.jsx';
+import Form1 from './Forms/Form1'
+//import Event from './TP/Event/Event.jsx';
 //import Store from './TP/store/Store'
 //import Product from './TP/ProductList';
 //import ProductList from './TP/ProductList';
@@ -29,7 +30,8 @@ root.render(
     {/* <Counter defaultValue={0} /> */}
     {/* <ProductList />  */}
     {/* <Store />  */}
-    <Event />
+    {/* <Event /> */}
+    <Form1 />
 
   </React.StrictMode>
 );
