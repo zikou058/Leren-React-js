@@ -57,3 +57,8 @@ export default function Form1() {
         </form>
     </div>
 }
+
+
+
+
+// how to inputet form "forms" with fucntion 
