@@ -1,6 +1,12 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import React, { useEffect } from "react";
+import { useRef } from 'react'
 export default function Form1() {
-
+    
+    const inputNameRef = useRef();
+    const inputDateRef = useRef();
+    const inputCountryRef = useRef();
+    const inputAcceptConditionsRef = useRef();
 
     const [formValues, setFormValues] = useState({
         name:'',
@@ -9,37 +15,43 @@ export default function Form1() {
         accept:'undefinde'
 
     });
-
-    const handleChange = (e) =>{
-        const currentTarget = e.currentTarget
-        const id = currentTarget.id
-        let value = currentTarget.value
-
-        if(currentTarget.type == 'checkbox'){
-             value = currentTarget.checked
-        }
-        setFormValues( (prevState) => {
-            return {...prevState, ...{[id]: value}}
-            
+    useEffect(() =>{
+        inputNameRef.current.focus()
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+            const dd = String(today.getDate()).padStart(2, '0');
+        inputDateRef.current.value = `${yyyy}-${mm}-${dd}`;
+        inputCountryRef.current.value  = 'BE';
+        
+    }, [])
+    const handleSubmit = (e) =>{
+        e.preventDefault(); 
+        setFormValues({
+            name : inputNameRef.current.value,
+            date : inputDateRef.current .value,
+            country : inputCountryRef.current.value,
+            accept : inputAcceptConditionsRef.current .value
         })
-        console.log(formValues)
-    }
-    
+    }; 
     return <div className={'container my-4'}>
         <form className="container my-10">
-            ON BASE DONNE: {JSON.stringify(formValues)}
+            <div><h1>Time :</h1>{(new Date()).toLocaleString()}</div>
+            <div><h1>Valeur :</h1>
+                {JSON.stringify(formValues)}
+            </div>
              <div className="form-group">
               <label>Name</label>
-              <input type="text" id="name" className='form-control' onChange={handleChange}/>
+              <input type="text" id="name" className='form-control' ref={inputNameRef}/>
             </div>
             <div className="form-group">
               <label>Age</label> 
-              <input type="text" id="age" className="form-control" onChange={handleChange}/>
+              <input type="date" id="date" className="form-control" ref={inputDateRef}/>
             </div>
             <div className="form-group">
               <label>Country</label> 
               <label htmlfor="country"></label>
-              <select className="form-control" id="country" onChange={handleChange} >
+              <select className="form-control" id="country" ref={inputCountryRef} >
                     <option value="MA">Maroc</option>
                     <option value="BE">Berlin</option>
                     <option value="US">USA</option>
@@ -48,17 +60,12 @@ export default function Form1() {
               </select>
             </div>
             <div className="form- check">
-                <input type="checkbox" id="accept" className="form-check-input" onChange={handleChange}/>
+                <input type="checkbox" id="accept" className="form-check-input" ref={inputAcceptConditionsRef}/>
                 <label htmlFor="accept" className="form-check-label">Accept our rules</label>
             </div>
             <div className="form-group">
-                <button className="btn btn-primary" onClick={handleClick}>Save</button>
+                <button onClick={handleSubmit} className="btn btn-primary">Save</button>
             </div>
         </form>
     </div>
 }
-
-
-
-
-// how to inputet form "forms" with fucntion 

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Form1 from './Forms/Form1'
 //import Event from './TP/Event/Event.jsx';
-//import Store from './TP/store/Store'
+//import Store from './TP/store/Store';
 //import Product from './TP/ProductList';
 //import ProductList from './TP/ProductList';
 //import Appp from './test_bootstrap/Appp';
@@ -38,4 +38,3 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
