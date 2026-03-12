@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Form1 from './Forms/Form1'
+import FormPraktis from './Forms/FormPraktis';
 //import Event from './TP/Event/Event.jsx';
 //import Store from './TP/store/Store';
 //import Product from './TP/ProductList';
@@ -31,7 +32,8 @@ root.render(
     {/* <ProductList />  */}
     {/* <Store />  */}
     {/* <Event /> */}
-    <Form1 />
+    {/* <Form1 /> */}
+    <FormPraktis />
 
   </React.StrictMode>
 );
