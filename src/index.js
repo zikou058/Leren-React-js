@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import Form1 from './Forms/Form1'
-import FormPraktis from './Forms/FormPraktis';
+import Page from './LanguageSwitcher/Page';
 //import Event from './TP/Event/Event.jsx';
 //import Store from './TP/store/Store';
 //import Product from './TP/ProductList';
@@ -16,7 +14,7 @@ import FormPraktis from './Forms/FormPraktis';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //const fruitsArray = ['Lemon', 'Stron', 'Tomate', 'Banan'];
 root.render(
-  <React.StrictMode>
+/*
     {/* <HalloWorld lastName='Zakaria' /> 
     <TextField inputName='firstName' inputLabel='firstname'> 
      Veuillez enter un first name
@@ -24,18 +22,18 @@ root.render(
     <TextField inputName='lastName' inputLabel='last name'>
       Veuillez enter un last name
     </TextField>
-    <Fruit fruits={fruitsArray}/>  */}
-    {/*<Counter /> */}
-    {/* <Counter defaultValue={2} incrementBy={3} /> */}
-    {/* <Form /> */}
-    {/* <Counter defaultValue={0} /> */}
-    {/* <ProductList />  */}
-    {/* <Store />  */}
-    {/* <Event /> */}
-    {/* <Form1 /> */}
-    <FormPraktis />
+    <Fruit fruits={fruitsArray}/>  */
+    /*<Counter /> */
+    /* <Counter defaultValue={2} incrementBy={3} /> */
+    /* <Form /> */
+    /* <Counter defaultValue={0} /> */
+    /* <ProductList />  */
+    /* <Store />  */
+    /* <Event /> */
+    /* <Form1 /> */
+    /* <FormPraktis /> */
+      <Page/>
 
-  </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
