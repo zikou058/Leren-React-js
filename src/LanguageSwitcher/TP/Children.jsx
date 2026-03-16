@@ -41,7 +41,7 @@ export default function Child ({ sendData}){
     const [email, setEmail] = useState("");
 
     const hanleName = (e) => {
-      setNagitme(e.target.value)
+      setName(e.target.value)
     }
     const handleEmail = (e) => {
       setEmail(e.target.value)
