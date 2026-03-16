@@ -19,7 +19,7 @@ export default function Parent() {
     // return( 
     //     <Child sendNumber={handleNumber} />
     // )
-
+// ex
     // const [count, setCount] = useState(0);
 
     // const add = () => {
@@ -37,22 +37,39 @@ export default function Parent() {
     //         <h3>Count : {count}</h3>
     //         <Child add={add}  rest={rest} addd={addd}/>
     //     </div>
+    // // )
+    // //ex
+    // const [user, setUser] = useState({});
+
+    // const handleForm = (data) => {
+    //   setUser(data)
+    // }
+
+    // return(
+    //     <div>
+    //         <h3>parent Component</h3>
+    //         <Child sendData={handleForm}/>  
+    //         <h3> Data From Child</h3>
+    //         <p> Name : {user.name}</p>
+    //         <p> Email : {user.email}</p>
+    //     </div>
     // )
-    const [user, setUser] = useState({});
 
-    const handleForm = (data) => {
-      setUser(data)
-    }
+    // ex 
 
+    // const unsername = 'zakaria'
+
+    // return(
+    //     <div>
+    //         <Child name={unsername}/>
+    //     </div>
+    // )
+
+    //ex 
     return(
         <div>
-            <h3>parent Component</h3>
-            <Child sendData={handleForm}/>  
-            <h3> Data From Child</h3>
-            <p> Name : {user.name}</p>
-            <p> Email : {user.email}</p>
+            <Child label="Enter your email : "/>
         </div>
     )
-
 
 }

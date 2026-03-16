@@ -1,5 +1,5 @@
 import { useState } from 'react'
-export default function Child ({ sendData}){
+export default function Child ({ label}){
     // const handleClick = () => {
     //   props.sendData(props)
     // }
@@ -37,31 +37,48 @@ export default function Child ({ sendData}){
     //     <button onClick={addd}> Add - </button>
     // </div>
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+    // const [name, setName] = useState("");
+    // const [email, setEmail] = useState("");
 
-    const hanleName = (e) => {
-      setName(e.target.value)
-    }
-    const handleEmail = (e) => {
-      setEmail(e.target.value)
-    }
+    // const hanleName = (e) => {
+    //   setName(e.target.value)
+    // }
+    // const handleEmail = (e) => {
+    //   setEmail(e.target.value)
+    // }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(name)
-      sendData({
-        name : name, 
-        email : email
-      })
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     console.log(name)
+    //   sendData({
+    //     name : name, 
+    //     email : email
+    //   })
+    // }
 
+    // return(
+    //     <form>
+    //         <input type="text" placeholder='name' onClick={hanleName}/>
+    //         <input type="email" placeholder='email' onClick={handleEmail}/>
+    //         <button onClick={handleSubmit}>Submit</button>
+    //     </form>
+    // )
+
+    //ex
+
+
+    // return(
+    //     <div>
+    //         <input type="text" defaultValue={name}/>
+    //     </div>
+    // )
+    
+    // ex 
     return(
-        <form>
-            <input type="text" placeholder='name' onClick={hanleName}/>
-            <input type="email" placeholder='email' onClick={handleEmail}/>
-            <button onClick={handleSubmit}>Submit</button>
-        </form>
+        <div>
+            <label>{label}</label>
+            <input type="email"/>
+        </div>
     )
 
 }
