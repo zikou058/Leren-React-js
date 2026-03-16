@@ -1,5 +1,5 @@
 import { useState } from 'react'
-export default function Child ({ add, rest , addd }){
+export default function Child ({ sendData}){
     // const handleClick = () => {
     //   props.sendData(props)
     // }
@@ -31,11 +31,39 @@ export default function Child ({ add, rest , addd }){
     
     // ex 4: 
 
-    return <div>
-        <button onClick={add}> Add +</button>
-        <button onClick={rest}> Rest </button>
-        <button onClick={addd}> Add - </button>
-    </div>
+    // return <div>
+    //     <button onClick={add}> Add +</button>
+    //     <button onClick={rest}> Rest </button>
+    //     <button onClick={addd}> Add - </button>
+    // </div>
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+
+    const hanleName = (e) => {
+      setNagitme(e.target.value)
+    }
+    const handleEmail = (e) => {
+      setEmail(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(name)
+      sendData({
+        name : name, 
+        email : email
+      })
+    }
+
+    return(
+        <form>
+            <input type="text" placeholder='name' onClick={hanleName}/>
+            <input type="email" placeholder='email' onClick={handleEmail}/>
+            <button onClick={handleSubmit}>Submit</button>
+        </form>
+    )
+
 }
 
 
