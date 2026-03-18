@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import Parent from './LanguageSwitcher/TP/Parent';
-import Child from './LanguageSwitcher/TP/Children';
+import { FormValidationBeginner } from './Tps/FormValidationBeginner'
+// import Parent from './LanguageSwitcher/TP/Parent';
+// import Child from './LanguageSwitcher/TP/Children';
 //import Event from './TP/Event/Event.jsx';
 //import Store from './TP/store/Store';
 //import Product from './TP/ProductList';
@@ -33,7 +34,7 @@ root.render(
     /* <Event /> */
     /* <Form1 /> */
     /* <FormPraktis /> */
-      <Parent />
+      <FormValidationBeginner />
 
 );
 // If you want to start measuring performance in your app, pass a function

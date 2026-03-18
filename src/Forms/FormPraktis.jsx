@@ -19,8 +19,8 @@ export default function FormPraktis () {
       console.log("Name:",inputNameRef.current.value)
     }
     useEffect(() => {
-      inputUsernameRef.current.focus(),
-      inputPaswordRef.current.focus(),
+      inputUsernameRef.current.focus();
+      inputPaswordRef.current.focus();
     }, []);
     return (
         <div>
