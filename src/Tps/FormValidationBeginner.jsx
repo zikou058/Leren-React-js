@@ -16,25 +16,72 @@ export function FormValidationBeginner () {
       const countryValue = countryField.current.value
       const acceptConditionsValue = acceptConditionsField.current.checked
 
+
       let isFormValid = true;
-      
-      if(nameValue.trime === '' ){ 
+
+      if(nameValue.trim() === '' ){ 
         setError( prevState => {
-            return [...prevState, 'name required']
+            return [...prevState, 'Name required']
         })
         isFormValid = false
       }
-      isFormValid = true
+      if(emailValue.trim() === ''){  
+        setError( prevState => {
+            return [...prevState, 'Email required']
+        })
+        isFormValid = false
+        }
+        else if (!emailValue.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            setError( prevState => {
+            return [...prevState, 'Email is invalid']
+        })
+        isFormValid = false
+        }
+      if(messageValue.trim() === '' ){  
+        setError( prevState => {
+            return [...prevState, 'Message required']
+        })
+        isFormValid = false
+      }
+      if(countryValue.trim() === '' ){  
+        setError( prevState => {
+            return [...prevState, 'Country required']
+        })
+        isFormValid = false
+      }
+      if(!acceptConditionsValue){  
+        setError( prevState => {
+            return [...prevState, 'Accpt Conditions should be checked']
+        })
+        isFormValid = false
+      }
+      return isFormValid
     }
       
     const handleSubmit = (e) => {
-      e.preventDefault() 
-      validateForm()
+      setError([])
+      if (!validateForm()) {
+        e.preventDefault()
+      }
+      else{
+        validateForm()
+        alert('Good')
+      }
+      
     }
 
     return (
     <div className={'container-fluid w-75 mx-auto my-5'}>
-        <form onClick={handleSubmit}>
+        {error.length > 0 ? 
+            <div className="alert alert-danger" role="alert">
+                <strong>Error</strong>
+                <ul>
+                    {error.map((erro, key) =>  <li key={key}>{erro}</li>)}
+                </ul>
+            </div>
+            : ''
+        }
+        <form >
             <h1>Contact form</h1>
             <hr/>
             {/*<-- Name input -->*/}
@@ -78,7 +125,7 @@ export function FormValidationBeginner () {
             </div>
 
             {/*<-- Submit -->*/}
-            <button type="submit" className="btn btn-primary w-100 mb-4">Submit</button>
+            <button onClick={handleSubmit} type="submit" className="btn btn-primary w-100 mb-4">Submit</button>
         </form>
     </div>
     )
